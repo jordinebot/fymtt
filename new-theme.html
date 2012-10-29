@@ -1,0 +1,760 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+   "http://www.w3.org/TR/html4/loose.dtd">
+
+<html lang="en">
+<head>
+
+  <!--
+    Designed by
+
+      _|_|_|      _|_|    _|_|_|_|    _|_|    _|  _|_|
+      _|    _|  _|_|_|_|    _|      _|_|_|_|  _|_|
+      _|    _|  _|          _|      _|        _|
+      _|_|_|      _|_|_|      _|_|    _|_|_|  _|
+      _|
+      _|
+
+                  _|        _|                      _|
+      _|      _|        _|_|_|    _|_|_|  _|_|_|
+      _|      _|  _|  _|    _|  _|    _|  _|    _|  _|
+        _|  _|    _|  _|    _|  _|    _|  _|    _|  _|
+          _|      _|    _|_|_|    _|_|_|  _|    _|  _|
+
+    "New Theme"
+    Found at Tumblr's theme garden.
+    http://www.tumblr.com/themes
+  -->
+
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>{Title}{block:SearchPage} ({lang:Search results for SearchQuery}){/block:SearchPage}{block:PostSummary} ({PostSummary}){/block:PostSummary}</title>
+  <meta name="description" content="{block:IndexPage}{block:Description}{MetaDescription}{/block:Description}{/block:IndexPage}{block:PermalinkPage}{PostSummary}{/block:PermalinkPage}" />
+  <meta name="author" content="Peter Vidani">
+  <link rel="shortcut icon" href="{Favicon}" />
+  <link rel="alternate" type="application/rss+xml" href="{RSS}" />
+  <link rel="stylesheet" href="http://static.tumblr.com/thpaaos/DIcklyl4z/reset.css" type="text/css">
+  
+  <meta name="color:LinkBackground" content="#FFFF00"/>
+  <meta name="text:Disqus Shortname" content="" />
+  
+  <style type="text/css">
+  body {
+    color: #2F2F2F;
+    font-size: 11px;
+    line-height: 20px;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    padding: 10px 10px 10px 210px;
+  }
+
+  a {
+    color: #2F2F2F;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    background-color: {color:LinkBackground};
+  }
+
+  ol, ul {
+    padding: 8px 0 0 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: -1px;
+    line-height: 21px;
+    text-shadow: #919191 1px 1px 2px;
+  }
+
+  a.title {
+    color: #2F2F2F;
+    text-decoration: none;
+  }
+
+  h2 + a.timestamp {
+    line-height: 30px;
+  }
+
+  p {
+    margin: 0;
+    padding: 0 0 8px 0;
+  }
+
+    h2 + p { padding: 8px 0 8px 0; }
+
+    p + ul { padding: 0 0 8px 15px; }
+
+    p + blockquote { margin: 0 0 8px 0; }
+    
+  em { font-style: italic; }
+  strong { font-weight: bold; }
+
+  blockquote {
+    border-left: 1px solid #EFEFEF;
+    margin: 8px 0;
+    padding: 0 0 0 15px;
+  }
+
+    blockquote > p:first-child {
+      padding: 0;
+    }
+
+  pre code {
+    font-family: 'Courier New', Courier, monospace;
+    background: #EFEFEF;
+  }
+
+  #header {
+    width: 200px;
+    position: fixed;
+    bottom: 10px;
+    left: 10px;
+  }
+
+    #header p {
+      margin: 0;
+      padding: 0 0 8px 0;
+    }
+
+    #header a.header {
+      color: #2F2F2F;
+      text-decoration: none;
+    }
+
+      #header a.header:hover,
+      #portrait a:hover,
+      a.title:hover {
+        background-color: transparent !important;
+      }
+
+  #portrait {
+    width: 42px;
+    height: 42px;
+    background-image: url({PortraitURL-40});
+    position: fixed;
+    top: 10px;
+    left: 10px;
+  }
+
+    #portrait a.mask {
+      width: 42px;
+      height: 42px;
+      background-image: url(http://static.tumblr.com/thpaaos/yAZklzau3/sprite-mask-portrait.png);
+      background-repeat: no-repeat;
+      background-position: top;
+      position: relative;
+      display: block;
+    }
+
+      #portrait:hover a.mask {
+        background-position: bottom;
+      }
+
+  #pagination {
+    width: 200px;
+    border-bottom: 1px solid #EFEFEF;
+    margin: 0 0 3px 0;
+    padding: 0 0 8px 0;
+    overflow: hidden;
+  }
+
+    #pagination .count {
+      width: 100px;
+      float: left;
+    }
+
+    #pagination .buttons {
+      width: 90px;
+      text-align: right;
+      float: right;
+    }
+
+      #pagination .buttons a {
+        text-decoration: none;
+      }
+
+        #pagination .buttons a span.underline {
+          text-decoration: underline;
+        }
+
+  form#search {
+    border-bottom: 1px solid #EFEFEF;
+    margin: 0 0 8px 0;
+  }
+
+    form#search input.button {
+      display: none;
+    }
+
+    form#search input.text {
+      width: 184px;
+      background: url(http://static.tumblr.com/thpaaos/3JQklzbvh/search.png) no-repeat;
+      border-width: 0px;
+      margin: 0 0 12px 0;
+      padding: 0 0 0 16px;
+    }
+
+  .column {
+    width: 410px;
+    margin: 0 0 0 50px;
+    float: left;
+  }
+
+    .column .post {
+      margin: 0 0 35px 0;
+    }
+    
+      .column .post img {
+        max-width: 100%;
+      }
+
+       a.timestamp,
+       a.tag {
+        color: #2F2F2F;
+        font-size: 9px;
+        text-decoration: none;
+        font-style: italic;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+      }
+
+        a.tag span.pound {
+          font-size: 12px;
+        }
+
+      .caption {
+        padding: 8px 0;
+      }
+
+        .caption p:first-child {
+          padding: 0 0 8px 0;
+        }
+
+       .media {
+        border: 1px solid #EFEFEF;
+        padding: 4px;
+      }
+
+         .media.audio {
+          width: 207px;
+        }
+
+       a.link {
+        width: 387px;
+        color: #2F2F2F;
+        text-decoration: none;
+        background: url(http://static.tumblr.com/thpaaos/heoklyiqd/link-bg.png) 1px 0px;
+        border: 1px solid #EFEFEF;
+        padding: 4px 10px 8px 10px;
+        display: block;
+      }
+
+         a.link .arrow {
+          width: 16px;
+          height: 15px;
+          margin: 0 0 -3px 2px;
+        }
+
+      table.chat {
+        width: 100%;
+        margin: 0 0 3px 0;
+        border-collapse: collapse;
+      }
+
+        h2 + table.chat {
+          margin: 10px 0 3px 0 !important;
+        }
+
+         table.chat tr td {
+          padding: 0 10px;
+        }
+
+           table.chat tr td.name {
+            font-weight: bold;
+            text-align: right;
+            vertical-align: top;
+          }
+
+           table.chat tr td.line1 {
+            background: #F2F2F2;
+          }
+          
+  a.install {
+    width: 94px;
+    height: 20px;
+    background: url(http://static.tumblr.com/thpaaos/OJlkqy8i6/install_theme.png);
+    display: block;
+    position: absolute;
+    top: 26px;
+    right: 3px;
+  }
+
+  {block:PermalinkPage}
+  .column.left { width: 510px; }
+    .column.left img { max-width: 100%; }
+  .column.right { width: 310px; }
+
+  ol.notes { list-style-type: none; margin: 0 0 10px 0; padding: 0; }
+    ol.notes img.avatar { display: none; }
+    ol.notes blockquote { margin: 0; }
+      ol.notes blockquote a { text-decoration: none; }
+  {/block:PermalinkPage}
+
+  {block:SearchPage}
+  .box { width: 260px; height: 290px; margin: 0 0 50px 50px; position: relative; float: left; }
+    .box .top { max-height: 245px; border-top: 1px solid #EFEFEF; border-right: 1px solid #EFEFEF; border-left: 1px solid #EFEFEF; padding: 4px 4px 0 4px; overflow: hidden; }
+    .box img { max-width: 250px; }
+    .border { height: 4px; background: #FFFFFF; border-right: 1px solid #EFEFEF; border-bottom: 1px solid #EFEFEF; border-left: 1px solid #EFEFEF; }
+  .column { display: none; }
+  {/block:SearchPage}
+
+  {block:TagPage}
+  .box { width: 260px; height: 290px; margin: 0 0 50px 50px; position: relative; float: left; }
+    .box a.tag.the_active_one_is_{URLSafeTag} { background-color: {color:LinkBackground}; }
+    .box img { max-width: 100%; }
+    .box .top { max-height: 245px; border-top: 1px solid #EFEFEF; border-right: 1px solid #EFEFEF; border-left: 1px solid #EFEFEF; padding: 4px 4px 0 4px; overflow: hidden; }
+    .border { height: 4px; background: #FFFFFF; border-right: 1px solid #EFEFEF; border-bottom: 1px solid #EFEFEF; border-left: 1px solid #EFEFEF; }
+  .column { display: none; }
+  {/block:TagPage}
+
+  {CustomCSS}
+  </style>
+
+<!-- GOOGLE ANALYTICS -->
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27288248-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<!-- FINAL GOOGLE ANALYTICS -->
+  
+  
+</head>
+<body>
+  <a href="http://www.tumblr.com/theme/1535" class="install"></a>
+  
+  <div id="portrait"><a href="/follow/{Name}" class="mask"></a></div>
+
+  <div id="header">
+    <form id="search" action="/search" method="get">
+      <input class="text" type="text" name="q" value="{SearchQuery}"/>
+      <input class="button" type="submit" value="{lang:Search}"/>
+    </form>
+    {block:Pagination}
+    <div id="pagination">
+      <div class="count">{CurrentPage}/{TotalPages}</div>
+      <div class="buttons">
+        {block:NextPage}<a href="{NextPage}"><span class="underline">{lang:Next}</span>&rarr;</a>{/block:NextPage}
+      </div>
+    </div>
+    {/block:Pagination}
+    {block:PermalinkPagination}
+    <div id="pagination">
+      <a href="{Permalink}">&infin;</a>
+      <div class="buttons">
+        {block:NextPost}<a href="{NextPost}">&larr;<span class="underline">{lang:Back}</span></a>{/block:NextPost}
+        {block:PreviousPost}&nbsp;&nbsp;<a href="{PreviousPost}"><span class="underline">{lang:Next}</span>&rarr;</a>{/block:PreviousPost}
+      </div>
+    </div>
+    {/block:PermalinkPagination}
+    {block:Description}<p>{Description}</p>{/block:Description}
+    <p><div style="max-height:120px; overflow:auto; display:none; {block:HasPages}display:block;{/block:HasPages}{block:AskEnabled}display:block;{/block:AskEnabled}{block:SubmissionsEnabled}display:block;{/block:SubmissionsEnabled}">
+        {block:AskEnabled}<a href="/ask">{AskLabel}</a><br/>{/block:AskEnabled}
+        {block:SubmissionsEnabled}<a href="/submit">{SubmitLabel}</a><br/>{/block:SubmissionsEnabled}
+        {block:HasPages}
+        {block:Pages}<a href="{URL}">{Label}</a><br/>{/block:Pages}
+        {/block:HasPages}
+    </div></p>
+    
+    <h2><a href="/" class="header">{Title}</a></h2>
+  </div>
+
+  {block:IndexPage}
+  <div class="column">
+    {block:Posts}
+    {block:Odd}
+    <div class="post">
+      {block:Photo}
+      <div class="media">
+        {LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}" alt="{PhotoAlt}">{LinkCloseTag}
+      </div>
+      {block:Caption}
+      <div class="caption">
+        {Caption}
+      </div>
+      {/block:Caption}
+      {/block:Photo}
+
+      {block:Video}
+      <div class="media">
+        {Video-400}
+      </div>
+      {block:Caption}
+      <div class="caption">
+        {Caption}
+      </div>
+      {/block:Caption}
+      {/block:Video}
+
+      {block:Audio}
+      <div class="media audio">
+        {AudioPlayerBlack}
+      </div>
+      {block:Caption}
+      <div class="caption">
+        {Caption}
+      </div>
+      {/block:Caption}
+      {/block:Audio}
+
+      {block:Quote}
+      <h2>"{Quote}"</h2>
+      {block:Source}
+      <div class="caption">
+        {Source}
+      </div>
+      {/block:Source}
+      {/block:Quote}
+
+      {block:Link}
+      <a href="{URL}" class="link" {Target}><h2>{Name}&nbsp;<img src="http://static.tumblr.com/thpaaos/tKxklykwm/link-arrow.png" class="arrow"></h2></a>
+      {block:Description}
+      <div class="caption">
+        {Description}
+      </div>
+      {/block:Description}
+      {/block:Link}
+
+      {block:Text}
+      {block:Title}<h2><a href="{Permalink}" class="title">{Title}</a></h2>{block:Title}
+      {Body}
+      {/block:Text}
+
+      {block:Chat}
+      {block:Title}<h2><a href="{Permalink}" class="title">{Title}</a></h2>{block:Title}
+      <table class="chat" cellspacing="0">
+        {block:Lines}
+        <tr>
+          {block:Label}<td class="name line{UserNumber}">{Label}</td>{block:Label}<td class="words line{UserNumber}">{Line}</td>
+        </tr>
+        {/block:Lines}
+      </table>
+      {/block:Chat}
+      {block:Date}<a href="{Permalink}" class="timestamp">@{lang:TimeAgo with NoteCount notes and PlayCount plays}</a><br>
+      {block:IfDisqusShortname}(&plusmn; <a href="{Permalink}#disqus_thread" class="timestamp"></a>)<br>{block:IfDisqusShortname}{/block:Date}
+      {block:Tags}<a href="{TagURL}" class="tag"><span class="pound">#</span>{Tag}</a>&nbsp;{/block:Tags}
+    </div><!-- post -->
+    {/block:Odd}
+    {/block:Posts}
+  </div><!-- column left -->
+
+  <div class="column">
+    {block:Posts}
+    {block:Even}
+    <div class="post">
+      {block:Photo}
+      <div class="media">
+        {LinkOpenTag}<img src="{PhotoURL-400}" alt="{PhotoAlt}">{LinkCloseTag}
+      </div>
+      {block:Caption}
+      <div class="caption">
+        {Caption}
+      </div>
+      {/block:Caption}
+      {/block:Photo}
+
+      {block:Video}
+      <div class="media">
+        {Video-400}
+      </div>
+      {block:Caption}
+      <div class="caption">
+        {Caption}
+      </div>
+      {/block:Caption}
+      {/block:Video}
+
+      {block:Audio}
+      <div class="media audio">
+        {AudioPlayerBlack}
+      </div>
+      {block:Caption}
+      <div class="caption">
+        {Caption}
+      </div>
+      {/block:Caption}
+      {/block:Audio}
+
+      {block:Quote}
+      <div class="quote">
+        <h2>"{Quote}"</h2>
+      </div>
+      {block:Source}
+      <div class="caption">
+        {Source}
+      </div>
+      {/block:Source}
+      {/block:Quote}
+
+      {block:Link}
+      <a href="{URL}" class="link" {Target}><h2>{Name}&nbsp;<img src="http://static.tumblr.com/thpaaos/tKxklykwm/link-arrow.png" class="arrow"></h2></a>
+      {block:Description}
+      <div class="caption">
+        {Description}
+      </div>
+      {/block:Description}
+      {/block:Link}
+
+      {block:Text}
+      {block:Title}<h2><a href="{Permalink}" class="title">{Title}</a></h2>{block:Title}
+      {Body}
+      {/block:Text}
+
+      {block:Chat}
+      {block:Title}<h2><a href="{Permalink}" class="title">{Title}</a></h2>{block:Title}
+      <table class="chat" cellspacing="0">
+        {block:Lines}
+        <tr>
+          {block:Label}<td class="name line{UserNumber}">{Label}</td>{block:Label}<td class="words line{UserNumber}">{Line}</td>
+        </tr>
+        {/block:Lines}
+      </table>
+      {/block:Chat}
+      {block:Date}<a href="{Permalink}" class="timestamp">@{lang:TimeAgo with NoteCount notes and PlayCount plays}</a><br>
+      {block:IfDisqusShortname}(&plusmn; <a href="{Permalink}#disqus_thread" class="timestamp"></a>)<br>{block:IfDisqusShortname}{/block:Date}
+      {block:Tags}<a href="{TagURL}" class="tag"><span class="pound">#</span>{Tag}</a>&nbsp;{/block:Tags}
+    </div><!-- post -->
+    {/block:Even}
+    {/block:Posts}
+  </div><!-- column -->
+  {/block:IndexPage}
+
+  
+  {block:Permalink}
+  <div class="column left">
+    {block:Posts}
+    {block:Odd}
+    <div class="post">
+      {block:Photo}
+      <div class="media">
+        {LinkOpenTag}<img src="{PhotoURL-500}" alt="{PhotoAlt}">{LinkCloseTag}
+      </div>
+      {block:Caption}
+      <div class="caption">
+        {Caption}
+      </div>
+      {/block:Caption}
+      {/block:Photo}
+
+      {block:Video}
+      <div class="media">
+        {Video-500}
+      </div>
+      {block:Caption}
+      <div class="caption">
+        {Caption}
+      </div>
+      {/block:Caption}
+      {/block:Video}
+
+      {block:Audio}
+      <div class="media audio">
+        {AudioPlayerBlack}
+      </div>
+      {block:Caption}
+      <div class="caption">
+        {Caption}
+      </div>
+      {/block:Caption}
+      {/block:Audio}
+
+      {block:Quote}
+      <div class="quote">
+        <h2>"{Quote}"</h2>
+      </div>
+      {block:Source}
+      <div class="caption">
+        {Source}
+      </div>
+      {/block:Source}
+      {/block:Quote}
+
+      {block:Link}
+      <a href="{URL}" class="link" {Target}><h2>{Name}&nbsp;<img src="http://static.tumblr.com/thpaaos/tKxklykwm/link-arrow.png" class="arrow"></h2></a>
+      {block:Description}
+      <div class="caption">
+        {Description}
+      </div>
+      {/block:Description}
+      {/block:Link}
+
+      {block:Text}
+      {block:Title}<h2><a href="{Permalink}" class="title">{Title}</a></h2>{block:Title}
+      {Body}
+      {/block:Text}
+
+      {block:Chat}
+      {block:Title}<h2><a href="{Permalink}" class="title">{Title}</a></h2>{block:Title}
+      <table class="chat" cellspacing="0">
+        {block:Lines}
+        <tr>
+          {block:Label}<td class="name line{UserNumber}">{Label}</td>{block:Label}<td class="words line{UserNumber}">{Line}</td>
+        </tr>
+        {/block:Lines}
+      </table>
+      {/block:Chat}
+      {block:Date}<a href="{Permalink}" class="timestamp">@{lang:TimeAgo with NoteCount notes and PlayCount plays}</a><br>
+      {block:IfDisqusShortname}(&plusmn; <a href="{Permalink}#disqus_thread" class="timestamp"></a>)<br>{block:IfDisqusShortname}{/block:Date}
+      {block:Tags}<a href="{TagURL}" class="tag"><span class="pound">#</span>{Tag}</a>&nbsp;{/block:Tags}
+    </div><!-- post -->
+    {/block:Odd}
+    {/block:Posts}
+  </div><!-- column left -->
+
+  <div class="column right">
+    {block:IfDisqusShortname}
+    {block:Date}
+    <div id="disqus_thread"></div>
+    <script type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/embed.js"></script>
+    <noscript><a href="http://{text:Disqus Shortname}.disqus.com/?url=ref">{lang:View the discussion thread}</a></noscript>
+    {/block:Date}
+    {/block:IfDisqusShortname}
+    
+    {PostNotes}
+  </div><!-- column -->
+  {/block:Permalink}
+
+  {block:SearchPage}
+  {block:Posts}
+  <div class="box">
+    <div class="top">
+      {block:Photo}
+      {LinkOpenTag}<a href="{Permalink}"><img src="{PhotoURL-250}" alt="{PhotoAlt}"></a>{LinkCloseTag}
+      {/block:Photo}
+      {block:Video}
+        {Video-250}
+      {/block:Video}
+      {block:Audio}
+        {AudioPlayerBlack}
+      {block:Caption}
+        {Caption}
+      {/block:Caption}
+      {/block:Audio}
+      {block:Quote}
+      <b>"{Quote}"</b>
+      {block:Source}
+      <div class="caption">
+        {Source}
+      </div>
+      {/block:Source}
+      {/block:Quote}
+      {block:Link}
+      <a href="{URL}" {Target}><b>{Name}&rarr;</b></a>
+      {block:Description}
+      <div class="caption">
+        {Description}
+      </div>
+      {/block:Description}
+      {/block:Link}
+      {block:Text}
+      {block:Title}<b><a href="{Permalink}" class="title">{Title}</a></b><br/>{block:Title}
+      {Body}
+      {/block:Text}
+      {block:Chat}
+      {block:Title}<b><a href="{Permalink}" class="title">{Title}</a></b>{block:Title}
+      <table class="chat" cellspacing="0">
+        {block:Lines}
+        <tr>
+          {block:Label}<td class="name line{UserNumber}">{Label}</td>{block:Label}<td class="words line{UserNumber}">{Line}</td>
+        </tr>
+        {/block:Lines}
+      </table>
+      {/block:Chat}
+    </div>
+    <div class="border"></div>
+    <a href="{Permalink}" class="timestamp">{TimeAgo}</a><br>
+    {block:Tags}<a href="{TagURL}" class="tag"><span class="pound">#</span>{Tag}</a>&nbsp;{/block:Tags}
+  </div>
+  {/block:Posts}
+  {/block:SearchPage}
+
+  {block:TagPage}
+  {block:Posts}
+  <div class="box">
+    <div class="top">
+      {block:Photo}
+      {LinkOpenTag}<a href="{Permalink}"><img src="{PhotoURL-250}" alt="{PhotoAlt}"></a>{LinkCloseTag}
+      {/block:Photo}
+      {block:Video}
+        {Video-250}
+      {/block:Video}
+      {block:Audio}
+        {AudioPlayerBlack}
+      {block:Caption}
+        {Caption}
+      {/block:Caption}
+      {/block:Audio}
+      {block:Quote}
+      <b>"{Quote}"</b>
+      {block:Source}
+      <div class="caption">
+        {Source}
+      </div>
+      {/block:Source}
+      {/block:Quote}
+      {block:Link}
+      <a href="{URL}" {Target}><b>{Name}&rarr;</b></a>
+      {block:Description}
+      <div class="caption">
+        {Description}
+      </div>
+      {/block:Description}
+      {/block:Link}
+      {block:Text}
+      {block:Title}<b><a href="{Permalink}" class="title">{Title}</a></b><br/>{block:Title}
+      {Body}
+      {/block:Text}
+      {block:Chat}
+      {block:Title}<b><a href="{Permalink}" class="title">{Title}</a></b>{block:Title}
+      <table class="chat" cellspacing="0">
+        {block:Lines}
+        <tr>
+          {block:Label}<td class="name line{UserNumber}">{Label}</td>{block:Label}<td class="words line{UserNumber}">{Line}</td>
+        </tr>
+        {/block:Lines}
+      </table>
+      {/block:Chat}
+    </div>
+    <div class="border"></div>
+    <a href="{Permalink}" class="timestamp">{TimeAgo}</a><br>
+    {block:Tags}<a href="{TagURL}" class="tag the_active_one_is_{URLSafeTag}"><span class="pound">#</span>{Tag}</a>&nbsp;{/block:Tags}
+  </div>
+  {/block:Posts}
+  {/block:TagPage}
+  
+  {block:IfDisqusShortname}
+  <script type="text/javascript">
+  //<![CDATA[
+  (function() {
+      var links = document.getElementsByTagName('a');
+      var query = '?';
+      for(var i = 0; i < links.length; i++) {
+      if(links[i].href.indexOf('#disqus_thread') >= 0) {
+          query += 'url' + i + '=' + encodeURIComponent(links[i].href) + '&';
+      }
+      }
+      document.write('<script charset="utf-8" type="text/javascript" src="http://disqus.com/forums/{text:Disqus Shortname}/get_num_replies.js' + query + '"></' + 'script>');
+  })();
+  //]]>
+  </script>
+  {/block:IfDisqusShortname}
+</body>
+</html>
